@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Project:     inWidget: show pictures from instagram.com on your site!
  * File:        template.php
@@ -6,7 +6,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of MIT license
  * http://inwidget.ru/MIT-license.txt
- * 
+ *
  * @link http://inwidget.ru
  * @copyright 2014-2018 Alexandr Kazarmshchikov
  * @author Alexandr Kazarmshchikov
@@ -20,7 +20,7 @@ if(!$inWidget instanceof \inWidget\Core) {
 }
 
 ?>
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 	<head>
 		<title>inWidget - free Instagram widget for your site!</title>
@@ -45,18 +45,13 @@ if(!$inWidget instanceof \inWidget\Core) {
 					width:<?= $inWidget->width ?>px;
 				}
 			</style>
-		<?php 
-			else: require_once 'plugins/adaptive.php'; 
-			endif; 
+		<?php
+			else: require_once 'plugins/adaptive.php';
+			endif;
 		?>
 	</head>
 <body>
 <div id="widget" class="widget">
-	<a href="http://instagram.com/<?= $inWidget->data->username ?>" target="_blank" class="title">
-		<div class="icon">&nbsp;</div>
-		<div class="text"><?= $inWidget->lang['title'] ?></div>
-		<div class="clear">&nbsp;</div>
-	</a>
 	<?php if($inWidget->toolbar == true): ?>
 		<table class="profile">
 			<tr>
@@ -110,8 +105,8 @@ if(!$inWidget instanceof \inWidget\Core) {
 		else {
 			if(!empty($inWidget->config['HASHTAG'])) {
 				$inWidget->lang['imgEmptyByHash'] = str_replace(
-					'{$hashtag}', 
-					$inWidget->config['HASHTAG'], 
+					'{$hashtag}',
+					$inWidget->config['HASHTAG'],
 					$inWidget->lang['imgEmptyByHash']
 				);
 				echo '<div class="empty">'.$inWidget->lang['imgEmptyByHash'].'</div>';
@@ -120,13 +115,5 @@ if(!$inWidget instanceof \inWidget\Core) {
 		}
 	?>
 </div>
-<div class='copyright'>
-	&copy; <a href='http://inwidget.ru' target='_blank' title='Free Instagram widget for your site!'>inwidget.ru</a>
-</div>
 </body>
 </html>
-<!-- 
-	inWidget - free Instagram widget for your site!
-	http://inwidget.ru
-	© Alexandr Kazarmshchikov
--->

@@ -10,8 +10,8 @@
 		';
 	}
 	if(!isset($_GET['inline']) AND !isset($_GET['view'])) {
-		$inWidget->inline = 6;
-		$inWidget->view = 12;
+		$inWidget->inline = 4;
+		$inWidget->view = 4;
 	}
 ?>
 <script type="text/javascript" src="<?= $inWidget->skinPath ?>js/jquery-3.2.1.min.js"></script>
@@ -32,7 +32,7 @@
 	<?php if($inWidget->inline > 4): ?>
 		@media (max-width: 400px) {
 			<?= setImageSize(4) ?>
-		}	
+		}
 	<?php endif;?>
 	@media (max-width: 230px) {
 		<?= setImageSize(3) ?>
